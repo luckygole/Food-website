@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>The food world</title>
+    <link rel="icon" href="burger.png">
+
+</head>
+<body>
+<style>
+    body{
+        animation: color 5s linear infinite;
+        background-color: #C40C0C;
+    }   
+    /* @keyframes color{
+        0%{
+            border: 0%;
+            background-image: url(burger\,png.png);
+        }
+        25%{
+            border: 25%;
+            background-image:url(fries.png);
+        }
+        50%{
+            border: 50%;
+            background-color: #000;
+        }
+        75%{
+            border: 75%;
+            background-image: url(sandwish.png);
+        }
+        100%{
+            border: 100%;
+            background-image: url(emoji.png.gif);
+        }
+    }  */
+    *{
+        margin:0;
+        padding: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        
+    }
+    h1{
+        text-align: center;
+        color: #FFC100;
+        padding: 20px;
+        text-shadow: 2px 2px 10px green;
+        -webkit-text-stroke: 2px black;
+        font-size: 50px;
+    }
+    h1:hover{
+        text-shadow: 2px 2px 10px red, 2px 2px 10px;
+        color: red;
+    }
+
+    nav{
+        background-color: #FFC100;
+        display: grid;
+        place-items: center;
+    }
+    nav ul{
+        list-style-type: none;
+    }
+    nav ul a{
+        display:inline-block;
+        padding:20px;
+        text-decoration: none;
+        color: #000;
+        transition: 0.2s ease-in;
+        font-size: 18px;
+    }
+    nav ul a:hover{
+        background-color: green;
+        color: white;
+    }
+
+    .items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px 20px;
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        
+    }
+    
+     
+    .item img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: 0.2s ease;
+        animation: infinite;
+    }
+    @keyframes rotate {
+        100%{
+            rotate:360deg;
+        }
+     }
+    .item img:hover{
+            transform: scale(1.04);
+    }
+    .item h4{
+        padding: 5px;
+        text-align: center;
+    }
+    .item button{
+        padding: 5px 30px;
+        border: none;
+        outline: none;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 20px;
+        display: block;
+        margin: 0 auto;
+        transition: 0.2s all;
+    }
+    .item button:hover{
+        transform: scale(1.09);
+        background-color: red;
+    }
+    @media screen and (max-width:1000px){
+        .items{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media screen and (max-width:768px){
+        .items{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    
+    #notification{
+        display: flex;
+        background-color: black;
+        height: 70px;
+        width: 100%;
+        cursor: pointer;
+        border: 2px solid black;
+        padding: 20px 350px; 
+        
+    
+
+    }    
+    .a{
+        color: white;
+        padding-left: 40px;
+        transition: 0.2s all;
+        margin-left: 10px;
+    }
+    .a:hover{
+       transform: scale(1.20);
+       height: 70px;
+
+
+    }
+     #search{
+        color: black;
+        
+        
+
+    } 
+    #emoji{
+      justify-items: center;
+      place-items: center;
+      width:25%;
+      height: 100px;
+      background-color: rgba(0, 0, 0, 0.26); 
+      padding: 30px 50px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px black;
+      margin-bottom: 20px;
+      margin-left: 900px;
+      border-top: 2px solid red;
+      border:4px solid black;
+      animation: bettery 4s linear infinite;
+      cursor : url(emoji.png);
+
+    }
+
+
+     @keyframes bettery {
+        0%{
+            border: 0%;
+            background-color:  yellow;
+        }
+        10%{
+            border: 10%;
+            border:2px solid rgb(199, 205, 33);
+        }
+        15%{
+            border: 15%;
+            border:2px solid rgb(114, 194, 22);
+        }
+        20%{
+            border: 20%;
+            border:2px solid rgb(34, 209, 185);
+        }
+        25%{
+            border: 25%;
+            border:2px solid rgb(9, 220, 58);
+        }
+    } 
+    #rating{
+       font-size: 30px;
+       margin-left: 50px;
+       margin-bottom: 0px;
+       position: relative
+       
+    }
+    .emojii {
+        display: inline-block;
+        place-items: center;
+        padding: 5px 5px;
+        transition: 1s all;
+    }
+    .emojii:hover{
+        transform: scale(2.04);
+        text-shadow: 2px 2px 8px yellow;
+    }
+
+</style>
+
+
+    <h1 ><script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/lznlxwtc.json"
+    trigger="hover"
+    colors="primary:#e8e230"
+    style="width:50px;height:50px">
+</lord-icon>The food world<script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/lznlxwtc.json"
+    trigger="hover"
+    colors="primary:#e8e230"
+    style="width:50px;height:50px">
+</lord-icon></h1>
+    <nav>
+        <ul>
+            <a href="#"><li>home</li></a>
+            <a href="#"><li>about</li></a>
+            <a href="#"><li>near</li></a>
+            <a href="#"><li>order</li></a>
+            </a>
+        </ul>
+    </nav>
+    
+    <div id="search">
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/fkdzyfle.json"
+    trigger="hover"
+    style="width:30px;height:30px">
+</lord-icon>
+        <input type="search" id="search"  placeholder="search" ><script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/fkdzyfle.json"
+    trigger="hover"
+    style="width:30px;height:30px">
+</lord-icon>
+    </div>
+
+    <section class="items">
+           <div class="item">
+            <img src="burger.png">
+            <h4>burger</h4>
+            <button>order</button>
+           </div>
+
+           <div class="item">
+            <img src="fries.png">
+            <h4>fries</h4>
+            <button>order</button>
+           </div>
+
+           <div class="item">
+            <img src="pizza.png">
+            <h4>pizza</h4>
+            <button>order</button>
+           </div>
+
+           <div class="item">
+            <img src="chart.png">
+            <h4>Chart </h4>
+            <button>order</button>
+           </div>
+
+           <div class="item">
+            <img src="combo.png">
+            <h4>combo for you</h4>
+            <button>order</button>
+           </div>
+
+           <div class="item">
+            <img src="burgerr.png">
+            <h4>desi burger</h4>
+            <button>order</button>
+           </div>
+
+           <div class="item">
+            <img src="pizza.png">
+            <h4>extra large pizza</h4>
+            <button>order</button>
+           </div>
+
+           <div class="item">
+            <img src="fries.png">
+            <h4>chees fries</h4>
+            <button>order</button>
+           </div>
+
+           <div class="item">
+            <img src="combo.png">
+            <h4>large combo</h4>
+            <button>order</button>
+           </div>
+    </section>
+
+    <div id="emoji">
+        <div id="rating">Rating</div>
+        <div class="emojii">&#128526; </div>
+        <div class="emojii">&#128578; </div>
+        <div class="emojii">&#128525; </div>
+        <div class="emojii">&#128564; </div>
+        <div class="emojii">&#129324; </div>
+    </div>
+
+    <div id="notification">
+        <div class="a" title="categore"><script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/jnikqyih.json"
+    trigger="hover"
+    colors="primary:#ffffff"
+    style="width:30px;height:30px">
+</lord-icon></div>
+        <div class="a" title="bag"><script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/lxrsqlrx.json"
+    trigger="hover"
+    colors="primary:#ffffff"
+    style="width:30px;height:30px">
+</lord-icon></div>
+        <div class="a" title="pocket"><script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/ncitidvz.json"
+    trigger="hover"
+    colors="primary:#ffffff"
+    style="width:30px;height:30px">
+</lord-icon></div>
+        <div class="a" title="wifi"><script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/dkhzauae.json"
+    trigger="hover"
+    colors="primary:#ffffff"
+    style="width:30px;height:30px">
+</lord-icon></div>
+        <div class="a" title="contact"><script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/hrjifpbq.json"
+    trigger="hover"
+    colors="primary:#ffffff"
+    style="width:30px;height:30px">
+</lord-icon></div>
+<div class="a" title="delete"> <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/skkahier.json"
+    trigger="hover"
+    colors="primary:#ffffff"
+    style="width:30px;height:30px">
+</lord-icon></div>
+    </div>
+</body>
+</html>
